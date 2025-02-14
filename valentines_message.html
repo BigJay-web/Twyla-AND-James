@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Simulation</title>
+    <style>
+        body {
+            font-family: 'Georgia', serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 60%;
+            text-align: center;
+        }
+        h1 {
+            color: #d1495b;
+            font-size: 2.5rem;
+        }
+        .message {
+            font-size: 1.2rem;
+            color: #4a4a4a;
+            margin-top: 20px;
+        }
+        .input-container {
+            margin-top: 30px;
+        }
+        input[type="text"] {
+            padding: 10px;
+            width: 80%;
+            font-size: 1rem;
+            margin: 5px 0;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+        button {
+            background-color: #d1495b;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: #a6364e;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Write Your Valentine's Message</h1>
+        <p class="message">Enter a heartfelt message, and let's make it even more elegant for your loved one!</p>
+        
+        <div class="input-container">
+            <input type="text" id="userMessage" placeholder="Type your message here..." />
+            <br />
+            <button onclick="generateMessage()">Send Message</button>
+        </div>
+        
+        <p id="finalMessage" class="message"></p>
+    </div>
+
+    <script>
+        function generateMessage() {
+            var userMessage = document.getElementById('userMessage').value;
+
+            // Make sure there's a message to process
+            if (userMessage.trim() === "") {
+                alert("Please enter a message before sending!");
+                return;
+            }
+
+            var finalMessage = "My dearest love, <br><br>" + 
+                               "On this beautiful day, my heart overflows with affection and warmth for you. " + 
+                               "As I send you these words, know that each syllable carries a piece of my soul, " + 
+                               "and my thoughts are eternally entwined with yours. <br><br>" + 
+                               "<em>" + userMessage + "</em><br><br>" + 
+                               "Forever yours, <br> Your admirer";
+
+            // Show the generated message
+            document.getElementById('finalMessage').innerHTML = finalMessage;
+        }
+    </script>
+</body>
+</html>
