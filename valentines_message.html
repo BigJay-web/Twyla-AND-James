@@ -3,107 +3,145 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Valentine's Day Love for Twyla</title>
+    <title>TWYLA - Our Little World</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         body {
-            font-family: 'Arial', sans-serif;
-            background-color: #ffe6f2;
-            color: #4b0082;
+            background: url('https://png.pngtree.com/background/20230403/original/pngtree-starry-sky-forest-night-scene-picture-image_2273424.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+            font-family: 'Poppins', sans-serif;
             text-align: center;
             margin: 0;
             padding: 0;
+            overflow-x: hidden;
         }
-        h1 {
-            color: #d5006f;
-            font-size: 50px;
-            margin-top: 20px;
+        header {
+            padding: 40px;
+            background: rgba(0, 0, 0, 0.7);
+            box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
         }
-        p {
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        nav ul li {
+            display: inline;
+        }
+        nav a {
+            color: #C0C0C0;
+            text-decoration: none;
             font-size: 20px;
-            margin: 20px;
+            font-weight: bold;
+            transition: color 0.3s;
         }
-        .poetry {
-            font-style: italic;
-            color: #4b0082;
-            font-size: 24px;
+        nav a:hover {
+            color: #1E90FF;
         }
-        .message-button {
-            background-color: #d5006f;
+        section {
+            padding: 50px;
+            background: rgba(0, 0, 0, 0.6);
+            margin: 30px auto;
+            width: 80%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+        }
+        button {
+            background: #1E90FF;
             color: white;
-            padding: 15px 30px;
-            font-size: 20px;
+            padding: 12px 24px;
             border: none;
             cursor: pointer;
-            margin-top: 30px;
-            border-radius: 10px;
+            font-size: 18px;
+            border-radius: 25px;
+            transition: background 0.3s, transform 0.2s;
         }
-        .message-button:hover {
-            background-color: #c20055;
+        button:hover {
+            background: #C0C0C0;
+            color: #1E3A8A;
+            transform: scale(1.1);
         }
-        .hidden-message {
-            font-size: 24px;
-            color: #ff4081;
-            margin-top: 30px;
-            display: none;
+        .interactive {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 20px;
         }
-        .game {
-            background-color: #fff;
-            padding: 10px;
-            border-radius: 10px;
-            margin-top: 30px;
-            border: 2px solid #d5006f;
+        .star {
+            width: 60px;
+            height: 60px;
+            background: silver;
+            margin: 10px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            cursor: pointer;
+            transition: transform 0.2s, background 0.3s;
         }
-        .heart {
-            font-size: 50px;
-            color: #ff4081;
+        .star:hover {
+            background: white;
+            color: #1E3A8A;
+            transform: scale(1.2);
         }
     </style>
 </head>
 <body>
-
-    <h1>Happy Valentine's Day, Twyla!</h1>
-
-    <p class="poetry">“Across the miles, I feel your heart, <br> A love so deep, we’re never apart.”</p>
-
-    <p>Even though we're apart today, my heart is always with you. Here’s a little something for you:</p>
-    
-    <button class="message-button" onclick="revealMessage()">Click to See My Love for You</button>
-
-    <div class="hidden-message" id="hiddenMessage">
-        <p>Your love is my greatest joy, my sweetest song, and today I want to remind you that you mean the world to me. I am so grateful for you, Twyla. 💖</p>
-    </div>
-
-    <div class="game">
-        <h2>Love Guessing Game!</h2>
-        <p>Guess how many hearts are in the box:</p>
-        <input type="number" id="guess" placeholder="Enter your guess (1-5)">
-        <button onclick="checkGuess()">Submit Guess</button>
-        <p id="gameResult"></p>
-        <p id="heartBox" class="heart">❤️❤️❤️❤️❤️</p>
-    </div>
-
+    <header>
+        <h1>Welcome to Our Little World</h1>
+        <p>"You are my forever, and this is just the beginning of our story."</p>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#our-story">Our Story</a></li>
+            <li><a href="#firsts">The Night We Met</a></li>
+            <li><a href="#favorites">Our Favorite Things</a></li>
+            <li><a href="#for-you">For You, My Love</a></li>
+        </ul>
+    </nav>
+    <section id="our-story">
+        <h2>How It All Began</h2>
+        <p>I first saw you in high school, sitting in class. Your school visited ours, but I never spoke to you—just admired from a distance...</p>
+    </section>
+    <section id="firsts">
+        <h2>The Night We Met</h2>
+        <p>The first night we met on a rooftop was magical. That night, I loved you. Our first kiss was on my birthday, unplanned but perfect...</p>
+    </section>
+    <section id="favorites">
+        <h2>The Things We Love</h2>
+        <ul>
+            <li><strong>Her Favorite Music:</strong> Ariana Grande, Whitney Houston, Celine Dion...</li>
+            <li><strong>Our Favorite Movies:</strong> Good Will Hunting, Inception...</li>
+            <li><strong>Her Love for Books:</strong> Dan Brown, Angels and Demons...</li>
+        </ul>
+    </section>
+    <section id="for-you">
+        <h2>Just for You</h2>
+        <p>My love, this is my heartfelt letter to you...</p>
+        <button onclick="revealSurprise()">Click for a Surprise</button>
+        <div class="interactive">
+            <div class="star" onclick="revealMemory(1)">★</div>
+            <div class="star" onclick="revealMemory(2)">★</div>
+            <div class="star" onclick="revealMemory(3)">★</div>
+        </div>
+    </section>
     <script>
-        // Reveal the hidden message when button is clicked
-        function revealMessage() {
-            var message = document.getElementById("hiddenMessage");
-            message.style.display = "block";
+        function revealSurprise() {
+            alert("Countdown to 22nd Feb: The Day I Ask You to Be Mine.");
         }
-
-        // Love guessing game
-        function checkGuess() {
-            var guess = document.getElementById("guess").value;
-            var result = document.getElementById("gameResult");
-            var heartCount = 5;  // The number of hearts in the box
-
-            if (guess == heartCount) {
-                result.textContent = "You guessed it! ❤️ Your love for me is spot on!";
-                result.style.color = "green";
-            } else {
-                result.textContent = "Oops, try again! ❤️ But remember, I love you no matter what!";
-                result.style.color = "red";
-            }
+        function revealMemory(number) {
+            let messages = [
+                "The first time I saw you, I knew you were special.",
+                "Our first kiss was the most magical moment.",
+                "Traveling together was just the beginning of our adventures."
+            ];
+            alert(messages[number - 1]);
         }
     </script>
-
 </body>
 </html>
